@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-deployment
-  namespace: web
+  namespace: luef-dev
   annotations:
     fluxcd.io/automated: "true"
 spec:
@@ -18,6 +18,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: <repo>/<tag>
+        image: ams9jen01ls.amsit.dev:80/nginx:latest
         ports:
         - containerPort: 80
